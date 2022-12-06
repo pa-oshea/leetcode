@@ -1,18 +1,22 @@
 package main
 
-import "testing"
+import (
+	"testing"
+
+	"github.com/stretchr/testify/assert"
+)
 
 func TestNumberToWords(t *testing.T) {
 
-	assertEqual(t, numberToWords(10), "Ten", "")
-	assertEqual(t, numberToWords(123), "One Hundred Twenty Three", "")
-	assertEqual(t, numberToWords(1000), "One Thousand", "")
-	assertEqual(t, numberToWords(10000), "Ten Thousand", "")
-	assertEqual(t, numberToWords(100000), "One Hundred Thousand", "")
-	assertEqual(t, numberToWords(1000000), "One Million", "")
-	assertEqual(t, numberToWords(12345), "Twelve Thousand Three Hundred Forty Five", "")
-	assertEqual(t, numberToWords(50868), "Fifty Thousand Eight Hundred Sixty Eight", "")
-	assertEqual(t, numberToWords(58868), "Fifty Eight Thousand Eight Hundred Sixty Eight", "")
-	assertEqual(t, numberToWords(1000000000), "One Billion", "")
+	assert.Equal(t, "Ten", numberToWords(10), "")
+	assert.Equal(t, "One Hundred Twenty Three", numberToWords(123), "")
+	assert.Equal(t, "One Thousand", numberToWords(1000), "")
+	assert.Equal(t, "Ten Thousand", numberToWords(10000), "")
+	assert.Equal(t, "One Hundred Thousand", numberToWords(100000), "")
+	assert.Equal(t, "One Million", numberToWords(1000000), "")
+	assert.Equal(t, "Twelve Thousand Three Hundred Forty Five", numberToWords(12345), "")
+	assert.Equal(t, "Fifty Thousand Eight Hundred Sixty Eight", numberToWords(50868), "")
+	assert.Equal(t, "Fifty Eight Thousand Eight Hundred Sixty Eight", numberToWords(58868), "")
+	assert.Equal(t, "One Billion", numberToWords(1000000000), "")
 
 }

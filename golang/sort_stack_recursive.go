@@ -16,7 +16,7 @@ func (s *Stack) push(el int) {
 }
 
 func (s *Stack) top() int {
-	return s.arr[len(s.arr) - 1]
+	return s.arr[len(s.arr)-1]
 }
 
 func (s *Stack) length() int {
@@ -33,7 +33,7 @@ func sort_stack(stack *Stack) *Stack {
 	sort_stack(stack)
 
 	insert_stack(stack, temp)
-	
+
 	return stack
 }
 

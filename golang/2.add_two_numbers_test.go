@@ -9,7 +9,7 @@ import (
 func getArray(l *ListNode) (r []int) {
 	for l != nil {
 		r = append(r, l.Val)
-        l = l.Next
+		l = l.Next
 	}
 	return
 }
